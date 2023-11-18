@@ -1,0 +1,34 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+68 [label="68: JUMPDEST\l69: PUSH1 0x6e\l71: PUSH1 0x04\l73: DUP1\l74: DUP1\l75: CALLDATALOAD\l76: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l97: AND\l98: SWAP1\l99: PUSH1 0x20\l101: ADD\l102: SWAP1\l103: SWAP2\l104: SWAP1\l105: POP\l106: POP\l107: PUSH1 0x70\l109: JUMP\l" fillcolor=lemonchiffon ];
+163 [label="163: JUMPDEST\l164: DUP1\l165: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l186: AND\l187: PUSH1 0x08\l189: PUSH1 0x09\l191: CALLVALUE\l192: DUP2\l193: ISZERO\l194: ISZERO\l195: PUSH1 0xc7\l197: JUMPI\l" ];
+229 [label="229: EXIT BLOCK\l" fillcolor=crimson ];
+12 [label="12: PUSH1 0x00\l14: CALLDATALOAD\l15: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l45: SWAP1\l46: DIV\l47: PUSH4 0xffffffff\l52: AND\l53: DUP1\l54: PUSH4 0xcde596b2\l59: EQ\l60: PUSH1 0x44\l62: JUMPI\l" fillcolor=lemonchiffon ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH1 0x3f\l11: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+199 [label="199: JUMPDEST\l200: DIV\l201: MUL\l202: PUSH1 0x40\l204: MLOAD\l205: PUSH1 0x00\l207: PUSH1 0x40\l209: MLOAD\l210: DUP1\l211: DUP4\l212: SUB\l213: DUP2\l214: DUP6\l215: DUP8\l216: PUSH2 0x8796\l219: GAS\l220: SUB\l221: CALL\l222: SWAP3\l223: POP\l224: POP\l225: POP\l226: POP\l227: POP\l228: JUMP\l" ];
+145 [label="145: PUSH1 0x00\l147: DUP1\l148: REVERT\l" shape=Msquare color=crimson ];
+149 [label="149: JUMPDEST\l150: PUSH1 0x00\l152: CALLVALUE\l153: GT\l154: ISZERO\l155: ISZERO\l156: PUSH1 0xa3\l158: JUMPI\l" ];
+198 [label="198: INVALID\l" shape=Msquare color=crimson ];
+63 [label="63: JUMPDEST\l64: PUSH1 0x00\l66: DUP1\l67: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+110 [label="110: JUMPDEST\l111: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+112 [label="112: JUMPDEST\l113: PUSH1 0x00\l115: DUP2\l116: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l137: AND\l138: EQ\l139: ISZERO\l140: ISZERO\l141: ISZERO\l142: PUSH1 0x95\l144: JUMPI\l" ];
+159 [label="159: PUSH1 0x00\l161: DUP1\l162: REVERT\l" shape=Msquare color=crimson ];
+0 -> 12;
+112 -> 149;
+12 -> 68;
+149 -> 159;
+163 -> 199;
+112 -> 145;
+12 -> 63;
+149 -> 163;
+0 -> 63;
+199 -> 110;
+145 -> 229;
+159 -> 229;
+198 -> 229;
+163 -> 198;
+63 -> 229;
+68 -> 112;
+110 -> 229;
+}

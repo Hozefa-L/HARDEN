@@ -1,0 +1,29 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+78 [label="78: JUMPDEST\l79: PUSH1 0x62\l81: PUSH1 0x04\l83: DUP1\l84: DUP1\l85: CALLDATALOAD\l86: SWAP1\l87: PUSH1 0x20\l89: ADD\l90: SWAP1\l91: SWAP2\l92: SWAP1\l93: POP\l94: POP\l95: PUSH1 0x64\l97: JUMP\l" fillcolor=lemonchiffon ];
+12 [label="12: PUSH1 0x00\l14: CALLDATALOAD\l15: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l45: SWAP1\l46: DIV\l47: PUSH4 0xffffffff\l52: AND\l53: DUP1\l54: PUSH4 0x1dd4914b\l59: EQ\l60: PUSH1 0x44\l62: JUMPI\l" fillcolor=lemonchiffon ];
+98 [label="98: JUMPDEST\l99: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+167 [label="167: EXIT BLOCK\l" fillcolor=crimson ];
+100 [label="100: JUMPDEST\l101: PUSH1 0x00\l103: CALLER\l104: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l125: AND\l126: DUP3\l127: PUSH1 0x40\l129: MLOAD\l130: PUSH1 0x00\l132: PUSH1 0x40\l134: MLOAD\l135: DUP1\l136: DUP4\l137: SUB\l138: DUP2\l139: DUP6\l140: DUP8\l141: PUSH2 0x8796\l144: GAS\l145: SUB\l146: CALL\l147: SWAP3\l148: POP\l149: POP\l150: POP\l151: SWAP1\l152: POP\l153: DUP1\l154: ISZERO\l155: ISZERO\l156: PUSH1 0xa3\l158: JUMPI\l" ];
+163 [label="163: JUMPDEST\l164: POP\l165: POP\l166: JUMP\l" ];
+68 [label="68: JUMPDEST\l69: CALLVALUE\l70: ISZERO\l71: PUSH1 0x4e\l73: JUMPI\l" fillcolor=lemonchiffon ];
+63 [label="63: JUMPDEST\l64: PUSH1 0x00\l66: DUP1\l67: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+74 [label="74: PUSH1 0x00\l76: DUP1\l77: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH1 0x3f\l11: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+159 [label="159: PUSH1 0x00\l161: DUP1\l162: REVERT\l" shape=Msquare color=crimson ];
+100 -> 163;
+0 -> 12;
+68 -> 78;
+74 -> 167;
+98 -> 167;
+68 -> 74;
+0 -> 63;
+100 -> 159;
+159 -> 167;
+78 -> 100;
+12 -> 68;
+63 -> 167;
+12 -> 63;
+163 -> 98;
+}

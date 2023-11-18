@@ -1,0 +1,34 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+84 [label="84: JUMPDEST\l85: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+125 [label="125: INVALID\l" shape=Msquare color=crimson ];
+78 [label="78: JUMPDEST\l79: PUSH1 0x54\l81: PUSH1 0x56\l83: JUMP\l" fillcolor=lemonchiffon ];
+86 [label="86: JUMPDEST\l87: PUSH1 0x00\l89: DUP1\l90: PUSH1 0x64\l92: PUSH1 0x28\l94: ADDRESS\l95: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l116: AND\l117: BALANCE\l118: MUL\l119: DUP2\l120: ISZERO\l121: ISZERO\l122: PUSH1 0x7e\l124: JUMPI\l" ];
+12 [label="12: PUSH1 0x00\l14: CALLDATALOAD\l15: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l45: SWAP1\l46: DIV\l47: PUSH4 0xffffffff\l52: AND\l53: DUP1\l54: PUSH4 0xd56b2889\l59: EQ\l60: PUSH1 0x44\l62: JUMPI\l" fillcolor=lemonchiffon ];
+74 [label="74: PUSH1 0x00\l76: DUP1\l77: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+211 [label="211: INVALID\l" shape=Msquare color=crimson ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH1 0x3f\l11: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+216 [label="216: EXIT BLOCK\l" fillcolor=crimson ];
+68 [label="68: JUMPDEST\l69: CALLVALUE\l70: ISZERO\l71: PUSH1 0x4e\l73: JUMPI\l" fillcolor=lemonchiffon ];
+63 [label="63: JUMPDEST\l64: PUSH1 0x00\l66: DUP1\l67: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+126 [label="126: JUMPDEST\l127: DIV\l128: SWAP2\l129: POP\l130: DUP2\l131: ADDRESS\l132: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l153: AND\l154: BALANCE\l155: SUB\l156: SWAP1\l157: POP\l158: ADDRESS\l159: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l180: AND\l181: DUP2\l182: PUSH1 0x40\l184: MLOAD\l185: PUSH1 0x00\l187: PUSH1 0x40\l189: MLOAD\l190: DUP1\l191: DUP4\l192: SUB\l193: DUP2\l194: DUP6\l195: DUP8\l196: PUSH2 0x8796\l199: GAS\l200: SUB\l201: CALL\l202: SWAP3\l203: POP\l204: POP\l205: POP\l206: ISZERO\l207: ISZERO\l208: PUSH1 0xd4\l210: JUMPI\l" ];
+212 [label="212: JUMPDEST\l213: POP\l214: POP\l215: JUMP\l" ];
+78 -> 86;
+63 -> 216;
+126 -> 212;
+0 -> 12;
+86 -> 125;
+12 -> 63;
+126 -> 211;
+68 -> 74;
+12 -> 68;
+74 -> 216;
+0 -> 63;
+211 -> 216;
+84 -> 216;
+86 -> 126;
+125 -> 216;
+68 -> 78;
+212 -> 84;
+}

@@ -1,0 +1,29 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+13 [label="13: PUSH1 0x00\l15: CALLDATALOAD\l16: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l46: SWAP1\l47: DIV\l48: PUSH4 0xffffffff\l53: AND\l54: DUP1\l55: PUSH4 0x76098303\l60: EQ\l61: PUSH2 0x0046\l64: JUMPI\l" fillcolor=lemonchiffon ];
+65 [label="65: JUMPDEST\l66: PUSH1 0x00\l68: DUP1\l69: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+80 [label="80: JUMPDEST\l81: PUSH1 0x01\l83: PUSH1 0x00\l85: SWAP1\l86: SLOAD\l87: SWAP1\l88: PUSH2 0x0100\l91: EXP\l92: SWAP1\l93: DIV\l94: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l115: AND\l116: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l137: AND\l138: CALLER\l139: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l160: AND\l161: EQ\l162: ISZERO\l163: ISZERO\l164: PUSH2 0x00ac\l167: JUMPI\l" ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH2 0x0041\l12: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+260 [label="260: PUSH1 0x00\l262: DUP1\l263: REVERT\l" shape=Msquare color=crimson ];
+70 [label="70: JUMPDEST\l71: PUSH2 0x004e\l74: PUSH2 0x0050\l77: JUMP\l" fillcolor=lemonchiffon ];
+168 [label="168: PUSH1 0x00\l170: DUP1\l171: REVERT\l" shape=Msquare color=crimson ];
+266 [label="266: EXIT BLOCK\l" fillcolor=crimson ];
+78 [label="78: JUMPDEST\l79: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+172 [label="172: JUMPDEST\l173: PUSH1 0x00\l175: DUP1\l176: SWAP1\l177: SLOAD\l178: SWAP1\l179: PUSH2 0x0100\l182: EXP\l183: SWAP1\l184: DIV\l185: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l206: AND\l207: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l228: AND\l229: CALLVALUE\l230: PUSH1 0x40\l232: MLOAD\l233: PUSH1 0x00\l235: PUSH1 0x40\l237: MLOAD\l238: DUP1\l239: DUP4\l240: SUB\l241: DUP2\l242: DUP6\l243: DUP8\l244: PUSH2 0x8796\l247: GAS\l248: SUB\l249: CALL\l250: SWAP3\l251: POP\l252: POP\l253: POP\l254: ISZERO\l255: ISZERO\l256: PUSH2 0x0108\l259: JUMPI\l" ];
+264 [label="264: JUMPDEST\l265: JUMP\l" ];
+70 -> 80;
+168 -> 266;
+172 -> 264;
+264 -> 78;
+13 -> 65;
+65 -> 266;
+80 -> 172;
+260 -> 266;
+78 -> 266;
+0 -> 65;
+13 -> 70;
+0 -> 13;
+80 -> 168;
+172 -> 260;
+}

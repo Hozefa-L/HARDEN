@@ -1,0 +1,34 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+12 [label="12: PUSH1 0x00\l14: CALLDATALOAD\l15: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l45: SWAP1\l46: DIV\l47: PUSH4 0xffffffff\l52: AND\l53: DUP1\l54: PUSH4 0x6d6a3f41\l59: EQ\l60: PUSH1 0x44\l62: JUMPI\l" fillcolor=lemonchiffon ];
+74 [label="74: PUSH1 0x00\l76: DUP1\l77: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+131 [label="131: JUMPDEST\l132: ADDRESS\l133: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l154: AND\l155: CALLER\l156: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l177: AND\l178: EQ\l179: ISZERO\l180: ISZERO\l181: PUSH1 0xbc\l183: JUMPI\l" ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH1 0x3f\l11: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+78 [label="78: JUMPDEST\l79: PUSH1 0x81\l81: PUSH1 0x04\l83: DUP1\l84: DUP1\l85: CALLDATALOAD\l86: SWAP1\l87: PUSH1 0x20\l89: ADD\l90: SWAP1\l91: SWAP2\l92: SWAP1\l93: DUP1\l94: CALLDATALOAD\l95: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l116: AND\l117: SWAP1\l118: PUSH1 0x20\l120: ADD\l121: SWAP1\l122: SWAP2\l123: SWAP1\l124: POP\l125: POP\l126: PUSH1 0x83\l128: JUMP\l" fillcolor=lemonchiffon ];
+242 [label="242: PUSH1 0x00\l244: DUP1\l245: REVERT\l" shape=Msquare color=crimson ];
+129 [label="129: JUMPDEST\l130: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+188 [label="188: JUMPDEST\l189: DUP1\l190: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l211: AND\l212: DUP3\l213: PUSH1 0x40\l215: MLOAD\l216: PUSH1 0x00\l218: PUSH1 0x40\l220: MLOAD\l221: DUP1\l222: DUP4\l223: SUB\l224: DUP2\l225: DUP6\l226: DUP8\l227: PUSH2 0x8796\l230: GAS\l231: SUB\l232: CALL\l233: SWAP3\l234: POP\l235: POP\l236: POP\l237: ISZERO\l238: ISZERO\l239: PUSH1 0xf6\l241: JUMPI\l" ];
+68 [label="68: JUMPDEST\l69: CALLVALUE\l70: ISZERO\l71: PUSH1 0x4e\l73: JUMPI\l" fillcolor=lemonchiffon ];
+184 [label="184: PUSH1 0x00\l186: DUP1\l187: REVERT\l" shape=Msquare color=crimson ];
+63 [label="63: JUMPDEST\l64: PUSH1 0x00\l66: DUP1\l67: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+250 [label="250: EXIT BLOCK\l" fillcolor=crimson ];
+246 [label="246: JUMPDEST\l247: POP\l248: POP\l249: JUMP\l" ];
+63 -> 250;
+78 -> 131;
+184 -> 250;
+188 -> 242;
+188 -> 246;
+246 -> 129;
+0 -> 12;
+242 -> 250;
+129 -> 250;
+74 -> 250;
+68 -> 74;
+0 -> 63;
+131 -> 184;
+68 -> 78;
+131 -> 188;
+12 -> 63;
+12 -> 68;
+}

@@ -1,0 +1,24 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+68 [label="68: JUMPDEST\l69: PUSH1 0x58\l71: PUSH1 0x04\l73: DUP1\l74: DUP1\l75: CALLDATALOAD\l76: SWAP1\l77: PUSH1 0x20\l79: ADD\l80: SWAP1\l81: SWAP2\l82: SWAP1\l83: POP\l84: POP\l85: PUSH1 0x5a\l87: JUMP\l" fillcolor=lemonchiffon ];
+63 [label="63: JUMPDEST\l64: PUSH1 0x00\l66: DUP1\l67: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+122 [label="122: PUSH1 0x00\l124: DUP1\l125: SWAP1\l126: SLOAD\l127: SWAP1\l128: PUSH2 0x0100\l131: EXP\l132: SWAP1\l133: DIV\l134: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l155: AND\l156: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l177: AND\l178: DUP2\l179: PUSH1 0x40\l181: MLOAD\l182: PUSH1 0x00\l184: PUSH1 0x40\l186: MLOAD\l187: DUP1\l188: DUP4\l189: SUB\l190: DUP2\l191: DUP6\l192: DUP8\l193: PUSH2 0x8796\l196: GAS\l197: SUB\l198: CALL\l199: SWAP3\l200: POP\l201: POP\l202: POP\l203: POP\l" ];
+12 [label="12: PUSH1 0x00\l14: CALLDATALOAD\l15: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l45: SWAP1\l46: DIV\l47: PUSH4 0xffffffff\l52: AND\l53: DUP1\l54: PUSH4 0x30df2139\l59: EQ\l60: PUSH1 0x44\l62: JUMPI\l" fillcolor=lemonchiffon ];
+204 [label="204: JUMPDEST\l205: POP\l206: JUMP\l" ];
+88 [label="88: JUMPDEST\l89: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH1 0x3f\l11: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+207 [label="207: EXIT BLOCK\l" fillcolor=crimson ];
+90 [label="90: JUMPDEST\l91: DUP1\l92: ADDRESS\l93: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l114: AND\l115: BALANCE\l116: LT\l117: ISZERO\l118: ISZERO\l119: PUSH1 0xcc\l121: JUMPI\l" ];
+12 -> 63;
+122 -> 204;
+88 -> 207;
+0 -> 63;
+90 -> 204;
+0 -> 12;
+63 -> 207;
+90 -> 122;
+204 -> 88;
+12 -> 68;
+68 -> 90;
+}

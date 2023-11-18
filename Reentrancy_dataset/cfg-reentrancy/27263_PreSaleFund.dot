@@ -1,0 +1,29 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+240 [label="240: EXIT BLOCK\l" fillcolor=crimson ];
+121 [label="121: JUMPDEST\l122: ADDRESS\l123: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l144: AND\l145: CALLER\l146: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l167: AND\l168: EQ\l169: ISZERO\l170: ISZERO\l171: PUSH1 0xb2\l173: JUMPI\l" ];
+119 [label="119: JUMPDEST\l120: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+178 [label="178: JUMPDEST\l179: DUP1\l180: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l201: AND\l202: DUP3\l203: PUSH1 0x40\l205: MLOAD\l206: PUSH1 0x00\l208: PUSH1 0x40\l210: MLOAD\l211: DUP1\l212: DUP4\l213: SUB\l214: DUP2\l215: DUP6\l216: DUP8\l217: PUSH2 0x8796\l220: GAS\l221: SUB\l222: CALL\l223: SWAP3\l224: POP\l225: POP\l226: POP\l227: ISZERO\l228: ISZERO\l229: PUSH1 0xec\l231: JUMPI\l" ];
+12 [label="12: PUSH1 0x00\l14: CALLDATALOAD\l15: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l45: SWAP1\l46: DIV\l47: PUSH4 0xffffffff\l52: AND\l53: DUP1\l54: PUSH4 0x6d6a3f41\l59: EQ\l60: PUSH1 0x44\l62: JUMPI\l" fillcolor=lemonchiffon ];
+236 [label="236: JUMPDEST\l237: POP\l238: POP\l239: JUMP\l" ];
+232 [label="232: PUSH1 0x00\l234: DUP1\l235: REVERT\l" shape=Msquare color=crimson ];
+63 [label="63: JUMPDEST\l64: PUSH1 0x00\l66: DUP1\l67: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+68 [label="68: JUMPDEST\l69: PUSH1 0x77\l71: PUSH1 0x04\l73: DUP1\l74: DUP1\l75: CALLDATALOAD\l76: SWAP1\l77: PUSH1 0x20\l79: ADD\l80: SWAP1\l81: SWAP2\l82: SWAP1\l83: DUP1\l84: CALLDATALOAD\l85: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l106: AND\l107: SWAP1\l108: PUSH1 0x20\l110: ADD\l111: SWAP1\l112: SWAP2\l113: SWAP1\l114: POP\l115: POP\l116: PUSH1 0x79\l118: JUMP\l" fillcolor=lemonchiffon ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH1 0x3f\l11: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+174 [label="174: PUSH1 0x00\l176: DUP1\l177: REVERT\l" shape=Msquare color=crimson ];
+178 -> 236;
+236 -> 119;
+121 -> 178;
+68 -> 121;
+0 -> 12;
+63 -> 240;
+12 -> 68;
+121 -> 174;
+178 -> 232;
+119 -> 240;
+0 -> 63;
+232 -> 240;
+12 -> 63;
+174 -> 240;
+}

@@ -1,0 +1,34 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+193 [label="193: PUSH1 0x00\l195: DUP1\l196: REVERT\l" shape=Msquare color=crimson ];
+353 [label="353: EXIT BLOCK\l" fillcolor=crimson ];
+65 [label="65: JUMPDEST\l66: PUSH1 0x00\l68: DUP1\l69: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+77 [label="77: PUSH1 0x00\l79: DUP1\l80: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+270 [label="270: PUSH1 0x00\l272: DUP1\l273: REVERT\l" shape=Msquare color=crimson ];
+13 [label="13: PUSH1 0x00\l15: CALLDATALOAD\l16: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l46: SWAP1\l47: DIV\l48: PUSH4 0xffffffff\l53: AND\l54: DUP1\l55: PUSH4 0x2e1a7d4d\l60: EQ\l61: PUSH2 0x0046\l64: JUMPI\l" fillcolor=lemonchiffon ];
+81 [label="81: JUMPDEST\l82: PUSH2 0x0067\l85: PUSH1 0x04\l87: DUP1\l88: DUP1\l89: CALLDATALOAD\l90: SWAP1\l91: PUSH1 0x20\l93: ADD\l94: SWAP1\l95: SWAP2\l96: SWAP1\l97: POP\l98: POP\l99: PUSH2 0x0069\l102: JUMP\l" fillcolor=lemonchiffon ];
+103 [label="103: JUMPDEST\l104: STOP\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH2 0x0041\l12: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+70 [label="70: JUMPDEST\l71: CALLVALUE\l72: ISZERO\l73: PUSH2 0x0051\l76: JUMPI\l" fillcolor=lemonchiffon ];
+197 [label="197: JUMPDEST\l198: DUP1\l199: PUSH1 0x00\l201: DUP1\l202: CALLER\l203: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l224: AND\l225: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l246: AND\l247: DUP2\l248: MSTORE\l249: PUSH1 0x20\l251: ADD\l252: SWAP1\l253: DUP2\l254: MSTORE\l255: PUSH1 0x20\l257: ADD\l258: PUSH1 0x00\l260: SHA3\l261: SLOAD\l262: LT\l263: ISZERO\l264: ISZERO\l265: ISZERO\l266: PUSH2 0x0112\l269: JUMPI\l" ];
+274 [label="274: JUMPDEST\l275: DUP1\l276: PUSH1 0x00\l278: DUP1\l279: CALLER\l280: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l301: AND\l302: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l323: AND\l324: DUP2\l325: MSTORE\l326: PUSH1 0x20\l328: ADD\l329: SWAP1\l330: DUP2\l331: MSTORE\l332: PUSH1 0x20\l334: ADD\l335: PUSH1 0x00\l337: SHA3\l338: PUSH1 0x00\l340: DUP3\l341: DUP3\l342: SLOAD\l343: SUB\l344: SWAP3\l345: POP\l346: POP\l347: DUP2\l348: SWAP1\l349: SSTORE\l350: POP\l351: POP\l352: JUMP\l" ];
+105 [label="105: JUMPDEST\l106: PUSH1 0x01\l108: PUSH1 0x00\l110: SWAP1\l111: SLOAD\l112: SWAP1\l113: PUSH2 0x0100\l116: EXP\l117: SWAP1\l118: DIV\l119: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l140: AND\l141: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l162: AND\l163: CALLER\l164: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l185: AND\l186: EQ\l187: ISZERO\l188: ISZERO\l189: PUSH2 0x00c5\l192: JUMPI\l" ];
+193 -> 353;
+197 -> 274;
+70 -> 81;
+0 -> 13;
+65 -> 353;
+105 -> 197;
+13 -> 70;
+274 -> 103;
+77 -> 353;
+270 -> 353;
+81 -> 105;
+0 -> 65;
+103 -> 353;
+13 -> 65;
+197 -> 270;
+70 -> 77;
+105 -> 193;
+}

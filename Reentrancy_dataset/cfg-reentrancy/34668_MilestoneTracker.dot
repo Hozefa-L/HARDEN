@@ -1,0 +1,29 @@
+digraph G {
+bgcolor=transparent rankdir=UD;
+node [shape=box style=filled color=black fillcolor=white fontname=arial fontcolor=black];
+98 [label="98: JUMPDEST\l99: PUSH1 0x40\l101: MLOAD\l102: DUP1\l103: DUP3\l104: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l125: AND\l126: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l147: AND\l148: DUP2\l149: MSTORE\l150: PUSH1 0x20\l152: ADD\l153: SWAP2\l154: POP\l155: POP\l156: PUSH1 0x40\l158: MLOAD\l159: DUP1\l160: SWAP2\l161: SUB\l162: SWAP1\l163: RETURN\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+164 [label="164: JUMPDEST\l165: PUSH1 0x00\l167: DUP2\l168: DUP2\l169: SLOAD\l170: DUP2\l171: LT\l172: ISZERO\l173: ISZERO\l174: PUSH1 0xb2\l176: JUMPI\l" ];
+78 [label="78: JUMPDEST\l79: PUSH1 0x62\l81: PUSH1 0x04\l83: DUP1\l84: DUP1\l85: CALLDATALOAD\l86: SWAP1\l87: PUSH1 0x20\l89: ADD\l90: SWAP1\l91: SWAP2\l92: SWAP1\l93: POP\l94: POP\l95: PUSH1 0xa4\l97: JUMP\l" fillcolor=lemonchiffon ];
+12 [label="12: PUSH1 0x00\l14: CALLDATALOAD\l15: PUSH29 0x0100000000000000000000000000000000000000000000000000000000\l45: SWAP1\l46: DIV\l47: PUSH4 0xffffffff\l52: AND\l53: DUP1\l54: PUSH4 0xe89e4ed6\l59: EQ\l60: PUSH1 0x44\l62: JUMPI\l" fillcolor=lemonchiffon ];
+178 [label="178: JUMPDEST\l179: SWAP1\l180: PUSH1 0x00\l182: MSTORE\l183: PUSH1 0x20\l185: PUSH1 0x00\l187: SHA3\l188: SWAP1\l189: ADD\l190: PUSH1 0x00\l192: SWAP2\l193: POP\l194: SWAP1\l195: POP\l196: DUP1\l197: PUSH1 0x00\l199: ADD\l200: PUSH1 0x00\l202: SWAP1\l203: SLOAD\l204: SWAP1\l205: PUSH2 0x0100\l208: EXP\l209: SWAP1\l210: DIV\l211: PUSH20 0xffffffffffffffffffffffffffffffffffffffff\l232: AND\l233: SWAP1\l234: POP\l235: DUP2\l236: JUMP\l" ];
+68 [label="68: JUMPDEST\l69: CALLVALUE\l70: ISZERO\l71: PUSH1 0x4e\l73: JUMPI\l" fillcolor=lemonchiffon ];
+63 [label="63: JUMPDEST\l64: PUSH1 0x00\l66: DUP1\l67: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+74 [label="74: PUSH1 0x00\l76: DUP1\l77: REVERT\l" fillcolor=lemonchiffon shape=Msquare color=crimson ];
+237 [label="237: EXIT BLOCK\l" fillcolor=crimson ];
+0 [label="0: PUSH1 0x60\l2: PUSH1 0x40\l4: MSTORE\l5: PUSH1 0x04\l7: CALLDATASIZE\l8: LT\l9: PUSH1 0x3f\l11: JUMPI\l" fillcolor=lemonchiffon shape=Msquare fillcolor=gold ];
+177 [label="177: INVALID\l" shape=Msquare color=crimson ];
+177 -> 237;
+74 -> 237;
+178 -> 98;
+164 -> 177;
+12 -> 63;
+68 -> 78;
+12 -> 68;
+68 -> 74;
+0 -> 63;
+164 -> 178;
+78 -> 164;
+63 -> 237;
+0 -> 12;
+98 -> 237;
+}
